@@ -27,7 +27,7 @@ void kinematicspart();
 void kinematicsrigid();
 void kineticspart();
 void workenergy();
-void impulse()
+void impulse();
 void dcbee();
 void acbee();
 void thrphase();
