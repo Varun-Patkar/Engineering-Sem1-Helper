@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    
+    <!-- navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Student Helper</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#" id="home">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <!--Subject Dropdown-->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                 Subjects
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                 <ul>  
+                  <li><a class="dropdown-item" href="#">Engineering Mathematics 1</a>
+                   <ul>
+                     <li><a class="dropdown-item" href="#">Complex Numbers</a></li>
+                     <li><a class="dropdown-item" href="#">Hyperbolic Function</a></li>
+                     <li><a class="dropdown-item" href="#">Logarithmic of Complex Numbers</a></li>
+                     <li><a class="dropdown-item" href="#">Partial Differentiation</a></li>
+                     <li><a class="dropdown-item" href="#">Application of Partial Differentiation</a></li>
+                     <li><a class="dropdown-item" href="#">Sucessive Differentiation</a></li>
+                     <li><a class="dropdown-item" href="#">Matrices</a></li>
+                     <li><a class="dropdown-item" href="#">Numerical Solutions of Transcendental Equations</a></li>
+                     <li><a class="dropdown-item" href="#">System of Linear Equations</a></li>
+                     <li><a class="dropdown-item" href="#">Expansion of Functions</a></li>
+                   </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Engineering Physics 1</a>
+                    <ul>
+                        <li><a class="dropdown-item" href="#">Quantum Physics</a></li>
+                        <li><a class="dropdown-item" href="#">Crystallography</a></li>
+                        <li><a class="dropdown-item" href="#">Semiconductor Physics</a></li>
+                        <li><a class="dropdown-item" href="#">Interference in Thin Films</a></li>
+                        <li><a class="dropdown-item" href="#">Superconductors and Supercapacitors</a></li>
+                        <li><a class="dropdown-item" href="#">Engineering Materials and Applications</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Engineerng Chemistry 1</a>
+                    <ul>
+                        <li><a class="dropdown-item" href="#">Atomic and Molecular Structure</a></li>
+                        <li><a class="dropdown-item" href="#">Aromatic systems &their molecular structure</a></li>
+                        <li><a class="dropdown-item" href="#">Intermolecular Forces & Critical Phenomena</a></li>
+                        <li><a class="dropdown-item" href="#">Phase Rule-Gibb’s Phase Rule</a></li>
+                        <li><a class="dropdown-item" href="#">Polymers</a></li>
+                        <li><a class="dropdown-item" href="#">Water</a></li>
+                    </ul>  
+                  </li>
+                  <li><a class="dropdown-item" href="#">Engineering Machenics</a>
+                    <ul>
+                        <li><a class="dropdown-item" href="#">Centroid</a></li>
+                        <li><a class="dropdown-item" href="#">System of Coplanar Forces</a></li>
+                        <li><a class="dropdown-item" href="#">Resultant</a></li>
+                        <li><a class="dropdown-item" href="#">Equilibrium of System of Coplanar Forces</a></li>
+                        <li><a class="dropdown-item" href="#">Equilibrium of Beams</a></li>
+                        <li><a class="dropdown-item" href="#">Friction</a></li>
+                        <li><a class="dropdown-item" href="#">Kinematics of Particle</a></li>
+                        <li><a class="dropdown-item" href="#">Kinematics of Rigid Body</a></li>
+                        <li><a class="dropdown-item" href="#">Kinetics of a Particle</a></li>
+                        <li><a class="dropdown-item" href="#">Kinetics of a Particle: Work and Energy</a></li>
+                        <li><a class="dropdown-item" href="#">Kinetics of a Particle: Impulse and Momentum</a></li>
+                    </ul>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Basic Electrical Engineering</a>
+                    <ul>
+                        <li><a class="dropdown-item" href="#">DC Circuits</a></li>
+                        <li><a class="dropdown-item" href="#">AC Circuits</a></li>
+                        <li><a class="dropdown-item" href="#">Three Phase Circuits</a></li>
+                        <li><a class="dropdown-item" href="#">Transformers</a></li>
+                        <li><a class="dropdown-item" href="#">Electrical Machines</a></li>
+                        <li><a class="dropdown-item" href="#">DC Machines</a></li>
+                    </ul>
+                  </li>
+                </ul>  
+                </div>
+            </li>
+            <!--Important Formulae-->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Important Formulae
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+            <!--Last Minute Notes-->
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Last Minute Notes
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+            <!--Practice Questions-->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Practice Questions
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+
+      <!--Scripts-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
