@@ -1,0 +1,96 @@
+{%extends 'subjects/subjects_base.html'%}
+{%block content%}
+{%for pdf in tt%}
+<div class="card" style="width: 16rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{pdf.name}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{pdf.subject}}-{{pdf.types}}</h6>
+      <a href="{{pdf.uploadque.url}}" class="card-link">Timetable Link</a><br>
+    </div>
+</div>
+{%endfor%}
+{%for pdf in tut%}
+<div class="card" style="width: 16rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{pdf.name}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{pdf.subject}}-{{pdf.types}}</h6>
+      <a href="{{pdf.uploadque.url}}" class="card-link">Tutorial Questions</a><br>
+      <a href="{{pdf.uploadans.url}}" class="card-link">Tutorial solutions</a><br>
+    </div>
+</div>
+{%endfor%}
+{%endblock%}
+{%block papers%}
+{%if uni%}
+<div class="university-qp">
+  <h4 >Previous Year University Question Papers</h4>
+  <ul class="list-group list-group-horizontal">
+    {%for pdf in uni%}
+      <li class="list-group-item"><a href="{{pdf.uploadque.url}}">{{pdf.year}}</a></li><br>
+    {%endfor%}
+  </ul>
+</div>
+<div class="university-sp">
+  <h4 >Previous Year University Solution Papers</h4>
+  <ul class="list-group list-group-horizontal">
+    {%for pdf in uni%}
+    <li class="list-group-item"><a href="{{pdf.uploadans.url}}">{{pdf.year}}</a></li><br>
+    {%endfor%}
+  </ul>
+</div>
+{%endif%}
+{%if iat1%}
+<div class="iat1-qp">
+  <h4 >Previous Year IAT 1 Question Papers</h4>
+  <ul class="list-group list-group-horizontal">
+    {%for pdf in iat1%}
+      <li class="list-group-item"><a href="{{pdf.uploadque.url}}">{{pdf.year}}</a></li><br>
+    {%endfor%}
+  </ul>
+</div>
+<div class="iat1-sp">
+  <h4 >Previous Year IAT 1 Solution Papers</h4>
+  <ul class="list-group list-group-horizontal">
+    {%for pdf in iat1%}
+    <li class="list-group-item"><a href="{{pdf.uploadans.url}}">{{pdf.year}}</a></li><br>
+    {%endfor%}
+  </ul>
+</div>
+{%endif%}
+{%if iat2%}
+<div class="iat2-qp">
+  <h4 >Previous Year IAT 2 Question Papers</h4>
+  <ul class="list-group list-group-horizontal">
+    {%for pdf in iat2%}
+      <li class="list-group-item"><a href="{{pdf.uploadque.url}}">{{pdf.year}}</a></li><br>
+    {%endfor%}
+  </ul>
+</div>
+<div class="iat2-sp">
+  <h4 >Previous Year IAT 2 Solution Papers</h4>
+  <ul class="list-group list-group-horizontal">
+    {%for pdf in iat2%}
+    <li class="list-group-item"><a href="{{pdf.uploadans.url}}">{{pdf.year}}</a></li> <br>
+    {%endfor%}
+  </ul>
+</div>
+{%endif%}
+{%if prelim%}
+<div class="prelim-qp">
+  <h4 >Previous Year Prelim Question Papers</h4>
+  <ul class="list-group list-group-horizontal">
+    {%for pdf in prelim%}
+      <li class="list-group-item"><a href="{{pdf.uploadque.url}}">{{pdf.year}}</a></li><br>
+    {%endfor%}
+  </ul>
+</div>
+<div class="prelim-sp">
+  <h4 >Previous Year Prelim Solution Papers</h4>
+  <ul class="list-group list-group-horizontal">
+    {%for pdf in prelim%}
+    <li class="list-group-item"><a href="{{pdf.uploadans.url}}">{{pdf.year}}</a></li><br>
+    {%endfor%}
+  </ul>
+</div>
+{%endif%}
+{%endblock%}

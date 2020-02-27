@@ -1,0 +1,470 @@
+{%load static%}
+{% static 'Images' as ImageUrl%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Helper</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'mstyle.css'%}">
+</head>
+<body>
+    
+{%if message%}
+  <div class="alert alert-{{message.tags}}">
+    {% for message in messages%}
+      <h3>{{message}}</h3>
+    {%endfor%}
+  </div>
+{%endif%}
+<div class="content">
+
+
+<!--Header-->
+<header><section id="header">
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light ">
+      <a href="#" class="navbar-brand">
+        <!-- Logo Image -->
+        <img src="{{ImageUrl}}/engg_logo.gif" width="45" alt="" class="d-inline-block align-middle mr-2">
+        <!-- Logo Text -->
+        <span class="text-uppercase font-weight-bold">Engineering Helper</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div></div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black;">
+              Subjects
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{% url 'subjects_maths'%}">Engineering Mathematics</a>
+              <a class="dropdown-item" href="{% url 'subjects_physics'%}">Engineering Physics</a>
+              <a class="dropdown-item" href="{% url 'subjects_chemistry'%}">Engineering Chemistry</a>
+              <a class="dropdown-item" href="{% url 'subjects_mechanics'%}">Engineering Mechanics</a>
+              <a class="dropdown-item" href="{% url 'subjects_bee'%}">Basic Electrical Engineering</a>
+              <div class="dropdown-divider"></div>
+              <a class="btn btn-primary" href="#" role="button">Full Catalog</a>
+            </div>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'mcq'%}" style="color: black;">Practice Questions</a>
+          </li>
+          {%if user.is_authenticated%}
+          <li class="nav-item"  id="login"><a href="#" id="hello">Hello, {{user.first_name}}</a></li>
+          <li class="nav-item"  id="login"><a href="accounts/logout" id="logout">Logout</a></li>
+          {%else%}
+            <li class="nav-item"  id="login"><a href="accounts/login" id="login">Login</a></li>
+            <li class="nav-item"><a class="btn btn-primary" href="accounts/register" role="button">Get Started</a></li>
+          {%endif%}
+        </ul>
+      </div>
+    </nav>
+  </div>
+</section>
+<!--Top image-->
+</header>
+    <div class="item2" style="background-image:linear-gradient(rgba(177, 177, 177, 0.5), rgba(0, 0, 0, 0.5)), url('{{ImageUrl}}/thought.jpg');">
+      <div class="top-text">
+        <h1 >lorem</h1>
+       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+      </div>
+    </div>
+<!--Cards-->
+    <main>
+      <div class="heading">
+        <h1>lorem</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div>
+      <div class="row">
+        <div class="col-3">
+          <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Engineering Mathematics</a>
+            <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="true">Engineering Physics</a>
+            <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="true">Engineering Chemistry</a>
+            <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="true">Engineering Mechanics</a>
+            <a class="nav-link" id="v-pills-something-tab" data-toggle="pill" href="#v-pills-something" role="tab" aria-controls="v-pills-something" aria-selected="true">Basic Electrical Engineering</a>
+          </div>
+        </div>
+
+        <div class="col-9">
+          <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+              <h3>Engineering Mathematics</h3>
+              <div class="sub-card">
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+                  
+              </div>
+              
+
+            </div>
+            <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+              <h3>Engineering Physics</h3>
+              <div class="sub-card">
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+                  
+              </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+              <h3>Engineering Chemistry</h3>
+              <div class="sub-card">
+                
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+                  
+              </div>
+            </div>
+            <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+              <h3>Engineering Mechanics</h3>
+              <div class="sub-card">
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+                  
+              </div></div>
+            <div class="tab-pane fade" id="v-pills-something" role="tabpanel" aria-labelledby="v-pills-something-tab">
+              <h3>Basic Electrical Engineering</h3>
+              <div class="sub-card">
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                  </div>
+                </div>
+                  
+              </div></div>
+          </div>
+        </div>
+      </div>
+    </main> 
+<!--Bottom-->
+    <div class="item3" style="background-image: url('{{ImageUrl}}/bottom_bkgd.png');">
+      <h1>Lorem</h1>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, consequuntur? Dolor, deleniti cum officia doloribus debitis perspiciatis excepturi molestias velit nesciunt quas magni porro pariatur modi maiores saepe voluptate reiciendis?</p>
+      {%if user.is_authenticated%}
+      {%else%}
+        <a class="btn btn-primary btn-lg" href="accounts/register" role="button">Get Started</a>
+      {%endif%}
+    </div> 
+  </div>
+<!--Footer-->
+  <footer>
+    <h6><a href="{% url 'home'%}">Engineering Helper</a></h6>
+    {%if user.is_authenticated%}
+    {%else%}
+      <h6><a href="accounts/login">Login</a></h6>
+      <h6><a href="accounts/register">Register</a></h6>
+    {%endif%}
+    <h6><a href="{% url 'mcq'%}">Solve MCQs</a></h6>
+  </footer>
+  
+<!--Scripts-->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
