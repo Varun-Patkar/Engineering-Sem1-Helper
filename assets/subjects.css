@@ -173,7 +173,8 @@ body{
     grid-gap: 5px;
     grid-template-areas: 
     "university university-s"
-    "iat iat-s"
+    "iat1 iat1-s"
+    "iat2 iat2-s"
     "prelim prelim-s";
     
 
@@ -217,7 +218,7 @@ body{
      background-color:  #d3e9fd;
   }
 .prev-link .iat1-qp{
-    grid-area: iat;  
+    grid-area: iat1;  
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(5rem,1fr));
@@ -236,7 +237,7 @@ body{
    
 }
 .prev-link .iat1-sp{
-    grid-area: iat-s;  
+    grid-area: iat1-s;  
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(5rem,1fr));
@@ -254,6 +255,14 @@ body{
    background-color:  #d3e9fd;
    
 }
+.prev-link .iat2-qp{
+  grid-area: iat2;  
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(5rem,1fr));
+  grid-auto-rows: minmax(50px,auto);
+  grid-gap: 5px;
+}
 .prev-link .iat2-qp h4{
   grid-row-start: 1;
   padding-top: 20px;
@@ -266,7 +275,7 @@ body{
  
 }
 .prev-link .iat2-sp{
-  grid-area: iat-s;  
+  grid-area: iat2-s;  
   width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(5rem,1fr));
