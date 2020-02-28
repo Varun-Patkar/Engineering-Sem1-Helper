@@ -1,9 +1,9 @@
 from django.shortcuts import render,redirect
-from .models import MCQ,PDF
+from .models import MCQ,PDF,Announcement
 from django.contrib.auth.decorators import login_required
 # Create your views here.
 def home(request):
-    return render(request,'home1.html')
+    return render(request,'home1.html',{'announcements':Announcement.objects.all()})
 @login_required
 def mcq(request):
     return render(request,'quiz.html',{'mcqs':MCQ.objects.all()})
