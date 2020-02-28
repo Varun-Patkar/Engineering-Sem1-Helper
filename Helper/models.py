@@ -34,3 +34,4 @@ class PDF(models.Model):
 
 class Announcement(models.Model):
     text=models.TextField()
+    upload=models.FileField(upload_to="",blank=True)
