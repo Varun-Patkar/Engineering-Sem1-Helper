@@ -67,9 +67,13 @@
     </nav>
   </div>
   <marquee  scrollamount="3" class="announcement" bgcolor="black" onmousemove="stop()" onmouseout="start()">
-    <a href="#">Announcement 1</a>
-    <a href="#">Announcement 2</a>
-    <a href="#">Announcement 3</a>
+    {%for announcement in announcements%}
+      {%if announcement.upload%}
+      <a href="{{announcement.upload.url}}">{{announcement.text}}</a>
+      {%else%}
+      <a href="#">{{announcement.text}}</a>
+      {%endif%}
+    {%endfor%}
   </marquee>
 </section>
 <!--Top image-->
