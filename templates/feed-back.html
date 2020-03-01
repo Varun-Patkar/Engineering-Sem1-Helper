@@ -1,9 +1,11 @@
+{%load static%}
+{% static 'Images' as ImageUrl%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>Contact Us-SemBooster</title>
     <link rel="stylesheet" href="{% static 'feed-back.css'%}">
 </head>
 <body style="background-image: url('{{ImageUrl}}/background.jpg');">
@@ -11,6 +13,7 @@
     <div class="feedback">
         <h1>Feedback Form</h1>
         <form action="feedback" method="POST">
+            {%csrf_token%}
         <p>First Name</p>
         <input type="text"name="first_name" placeholder="First Name"><br>
         <p>Last name</p>

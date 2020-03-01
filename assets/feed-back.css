@@ -1,0 +1,65 @@
+
+.feedback{
+    max-width: 600px;
+    min-height: 500px;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 30px auto;
+    border-radius: 20px;
+    padding: 30px;
+    resize: vertical;
+    font-family: sans-serif;
+    
+   
+}
+ .feedback p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+ }
+ .feedback input{
+    width: 100%;
+    margin-bottom: 15px;
+}
+.feedback input[type="text"], input[type="email"], #message
+{
+border: none;
+border-bottom: 1px solid #000;
+background: transparent;
+outline: none;
+height: 30px;
+font-size: 16px;
+}
+
+.feedback a{
+    text-decoration: none;
+    font-size: 15px;
+    color: #000;
+
+}
+.feedback input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #1c8adb;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    border-radius: 20px;
+}
+.feedback input[type="submit"]:hover{
+    cursor: pointer;
+    background: #39dc79;
+    color: #000;
+}
+.feedback textarea {
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding-top:15px;
+    outline: 0;
+    font-family: sans-serif;
+    margin-bottom: 15px;
+    text-align: left;
+   }

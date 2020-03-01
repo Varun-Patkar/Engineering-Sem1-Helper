@@ -1,19 +1,21 @@
+{%load static%}
+{% static 'Images' as ImageUrl%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <title>About Us-SemBooster</title>
     <link rel="stylesheet" href="{% static 'aboutus.css'%}">
 </head>
 <body style="background-image: url('{{ImageUrl}}/background.jpg');">
         <div class="about-us">
             <h1>Know The Developers</h1>
             <div class="about-dev">
-                <img src="Images/user.png" alt="" class="dev-img">
+                <img src="{{ImageUrl}}/Varun.jpg" alt="" class="dev-img">
                 <div class="dev-text">
-                    <h3>Name</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eligendi quam labore iure dolore neque, incidunt voluptate ullam delectus quisquam natus explicabo aliquid expedita sit placeat ea fugit sed ad!</p>
+                    <h3>Varun Anand Patkar</h3>
+                    <p>First Year Student at St. Francis Institute of Technology. Like to code, learn new things and enjoy the world. Try to think out of the box and find efficient solutions to problems. I have made the backend of the website that you're using right now. Live And Keep Learning!!</p>
                 </div>
             </div>
             <div class="about-dev">
@@ -22,10 +24,10 @@
                     <h3>Name</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eligendi quam labore iure dolore neque, incidunt voluptate ullam delectus quisquam natus explicabo aliquid expedita sit placeat ea fugit sed ad!</p>
                 </div>
-                <img src="Images/user.png" alt="" class="dev-img">
+                <img src="{{ImageUrl}}/user.png" alt="" class="dev-img">
             </div>
             <div class="about-dev" style="border: none;">
-                <img src="Images/user.png" alt="" class="dev-img">
+                <img src="{{ImageUrl}}/user.png" alt="" class="dev-img">
                 <div class="dev-text">
                     <h3>Name</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eligendi quam labore iure dolore neque, incidunt voluptate ullam delectus quisquam natus explicabo aliquid expedita sit placeat ea fugit sed ad!</p>

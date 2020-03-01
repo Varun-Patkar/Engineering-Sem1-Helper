@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Engineering Helper</title>
+    <title>SemBooster</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'mstyle.css'%}">
 </head>
@@ -25,11 +25,11 @@
 <header><section id="header">
   <div class="container-fluid">
     <nav class="navbar navbar-expand-lg navbar-light ">
-      <a href="#" class="navbar-brand">
+      <a href="{%url 'home'%}" class="navbar-brand">
         <!-- Logo Image -->
         <img src="{{ImageUrl}}/engg_logo.gif" width="45" alt="" class="d-inline-block align-middle mr-2">
         <!-- Logo Text -->
-        <span class="text-uppercase font-weight-bold">Engineering Helper</span>
+        <span class="text-uppercase font-weight-bold">SemBooster</span>
       </a>
       
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,9 +39,6 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'mcq'%}" style="color: black;">About Us</a>
-          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black;">
               Subjects
@@ -52,15 +49,18 @@
               <a class="dropdown-item" href="{% url 'subjects_chemistry'%}">Engineering Chemistry</a>
               <a class="dropdown-item" href="{% url 'subjects_mechanics'%}">Engineering Mechanics</a>
               <a class="dropdown-item" href="{% url 'subjects_bee'%}">Basic Electrical Engineering</a>
-              <div class="dropdown-divider"></div>
-              <a class="btn btn-primary" href="#" role="button">Full Catalog</a>
             </div>
           </li>
           
           <li class="nav-item">
             <a class="nav-link" href="{% url 'mcq'%}" style="color: black;">Practice Questions</a>
           </li>
-          
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'aboutus'%}" style="color: black;">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'feedback'%}" style="color: black;">Contact Us</a>
+          </li>
           {%if user.is_authenticated%}
           <li class="nav-item"  id="login"><a href="#" id="hello">Hello, {{user.first_name}}</a></li>
           <li class="nav-item"  id="login"><a href="accounts/logout" id="logout">Logout</a></li>
@@ -115,56 +115,56 @@
                   <div class="card-body">
                     <h5 class="card-title">Syllabus</h5>
                     <p class="card-text">Find the latest update in Mumbai University Syllabus here.</p>
-                    <a href="#" class="card-link">Syllabus</a>
+                    <a href="{%url 'subjects_maths'%}" class="card-link">Syllabus</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
                     <h5 class="card-title">Time Table</h5>
                     <p class="card-text">Find the End-Sem time table, IAT time table and Prelim Exam time table here</p>
-                    <a href="#" class="card-link">Time Table</a>
+                    <a href="{%url 'subjects_maths'%}" class="card-link">Time Table</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
                     <h5 class="card-title">Previous Year University Papers</h5>
                     <p class="card-text">Find the Past Year Mumbai University Question Papers here.</p>
-                    <a href="#" class="card-link">Previous Year University Papers</a>
+                    <a href="{%url 'subjects_maths'%}" class="card-link">Previous Year University Papers</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
                     <h5 class="card-title">Previous Year University Solutions</h5>
                     <p class="card-text">Find the Solution for the Past Year Mumbai University Question Papers here.</p>
-                    <a href="#" class="card-link">Previous Year University Solutions</a>
+                    <a href="{%url 'subjects_maths'%}" class="card-link">Previous Year University Solutions</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
                     <h5 class="card-title">IAT Question Papers</h5>
                     <p class="card-text">Find the Past Year College IAT Exam Question Papers here.</p>
-                    <a href="#" class="card-link">IAT Question Papers</a>
+                    <a href="{%url 'subjects_maths'%}" class="card-link">IAT Question Papers</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
                     <h5 class="card-title">Prelim Question Papers</h5>
                     <p class="card-text">Find the Past Year College Prelim Exam Question Papers here.</p>
-                    <a href="#" class="card-link">Prelim Question Papers</a>
+                    <a href="{%url 'subjects_maths'%}" class="card-link">Prelim Question Papers</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
                     <h5 class="card-title">Important Notes</h5>
                     <p class="card-text">Find the important notes prepared by our Expert Faculty Members</p>
-                    <a href="#" class="card-link">Important Notes</a>
+                    <a href="{%url 'subjects_maths'%}" class="card-link">Important Notes</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
                     <h5 class="card-title">Question Bank</h5>
                     <p class="card-text">Find the tutorial questions, important questions and question bank to for better preparation here.</p>
-                    <a href="#" class="card-link">Question Bank</a>
+                    <a href="{%url 'subjects_maths'%}" class="card-link">Question Bank</a>
                   </div>
                 </div>
                   
@@ -179,56 +179,56 @@
                   <div class="card-body">
                     <h5 class="card-title">Syllabus</h5>
                     <p class="card-text">Find the latest update in Mumbai University Syllabus here.</p>
-                    <a href="#" class="card-link">Syllabus</a>
+                    <a href="{%url 'subjects_physics'%}" class="card-link">Syllabus</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
                     <h5 class="card-title">Time Table</h5>
                     <p class="card-text">Find the End-Sem time table, IAT time table and Prelim Exam time table here</p>
-                    <a href="#" class="card-link">Time Table</a>
+                    <a href="{%url 'subjects_physics'%}" class="card-link">Time Table</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
                     <h5 class="card-title">Previous Year University Papers</h5>
                     <p class="card-text">Find the Past Year Mumbai University Question Papers here.</p>
-                    <a href="#" class="card-link">Previous Year University Papers</a>
+                    <a href="{%url 'subjects_physics'%}" class="card-link">Previous Year University Papers</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
                     <h5 class="card-title">Previous Year University Solutions</h5>
                     <p class="card-text">Find the Solution for the Past Year Mumbai University Question Papers here.</p>
-                    <a href="#" class="card-link">Previous Year University Solutions</a>
+                    <a href="{%url 'subjects_physics'%}" class="card-link">Previous Year University Solutions</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
                     <h5 class="card-title">IAT Question Papers</h5>
                     <p class="card-text">Find the Past Year College IAT Exam Question Papers here.</p>
-                    <a href="#" class="card-link">IAT Question Papers</a>
+                    <a href="{%url 'subjects_physics'%}" class="card-link">IAT Question Papers</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
                     <h5 class="card-title">Prelim Question Papers</h5>
                     <p class="card-text">Find the Past Year College Prelim Exam Question Papers here.</p>
-                    <a href="#" class="card-link">Prelim Question Papers</a>
+                    <a href="{%url 'subjects_physics'%}" class="card-link">Prelim Question Papers</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
                     <h5 class="card-title">Important Notes</h5>
                     <p class="card-text">Find the important notes prepared by our Expert Faculty Members</p>
-                    <a href="#" class="card-link">Important Notes</a>
+                    <a href="{%url 'subjects_physics'%}" class="card-link">Important Notes</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
                     <h5 class="card-title">Question Bank</h5>
                     <p class="card-text">Find the tutorial questions, important questions and question bank to for better preparation here.</p>
-                    <a href="#" class="card-link">Question Bank</a>
+                    <a href="{%url 'subjects_physics'%}" class="card-link">Question Bank</a>
                   </div>
                 </div>
                   
@@ -241,56 +241,56 @@
                   <div class="card-body">
                     <h5 class="card-title">Syllabus</h5>
                     <p class="card-text">Find the latest update in Mumbai University Syllabus here.</p>
-                    <a href="#" class="card-link">Syllabus</a>
+                    <a href="{%url 'subjects_chemistry'%}" class="card-link">Syllabus</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
                     <h5 class="card-title">Time Table</h5>
                     <p class="card-text">Find the End-Sem time table, IAT time table and Prelim Exam time table here</p>
-                    <a href="#" class="card-link">Time Table</a>
+                    <a href="{%url 'subjects_chemistry'%}" class="card-link">Time Table</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
                     <h5 class="card-title">Previous Year University Papers</h5>
                     <p class="card-text">Find the Past Year Mumbai University Question Papers here.</p>
-                    <a href="#" class="card-link">Previous Year University Papers</a>
+                    <a href="{%url 'subjects_chemistry'%}" class="card-link">Previous Year University Papers</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
                     <h5 class="card-title">Previous Year University Solutions</h5>
                     <p class="card-text">Find the Solution for the Past Year Mumbai University Question Papers here.</p>
-                    <a href="#" class="card-link">Previous Year University Solutions</a>
+                    <a href="{%url 'subjects_chemistry'%}" class="card-link">Previous Year University Solutions</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
                     <h5 class="card-title">IAT Question Papers</h5>
                     <p class="card-text">Find the Past Year College IAT Exam Question Papers here.</p>
-                    <a href="#" class="card-link">IAT Question Papers</a>
+                    <a href="{%url 'subjects_chemistry'%}" class="card-link">IAT Question Papers</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
                     <h5 class="card-title">Prelim Question Papers</h5>
                     <p class="card-text">Find the Past Year College Prelim Exam Question Papers here.</p>
-                    <a href="#" class="card-link">Prelim Question Papers</a>
+                    <a href="{%url 'subjects_chemistry'%}" class="card-link">Prelim Question Papers</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
                     <h5 class="card-title">Important Notes</h5>
                     <p class="card-text">Find the important notes prepared by our Expert Faculty Members</p>
-                    <a href="#" class="card-link">Important Notes</a>
+                    <a href="{%url 'subjects_chemistry'%}" class="card-link">Important Notes</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
                     <h5 class="card-title">Question Bank</h5>
                     <p class="card-text">Find the tutorial questions, important questions and question bank to for better preparation here.</p>
-                    <a href="#" class="card-link">Question Bank</a>
+                    <a href="{%url 'subjects_chemistry'%}" class="card-link">Question Bank</a>
                   </div>
                 </div>
                   
@@ -303,56 +303,56 @@
                   <div class="card-body">
                     <h5 class="card-title">Syllabus</h5>
                     <p class="card-text">Find the latest update in Mumbai University Syllabus here.</p>
-                    <a href="#" class="card-link">Syllabus</a>
+                    <a href="{%url 'subjects_mechanics'%}" class="card-link">Syllabus</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
                     <h5 class="card-title">Time Table</h5>
                     <p class="card-text">Find the End-Sem time table, IAT time table and Prelim Exam time table here</p>
-                    <a href="#" class="card-link">Time Table</a>
+                    <a href="{%url 'subjects_mechanics'%}" class="card-link">Time Table</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
                     <h5 class="card-title">Previous Year University Papers</h5>
                     <p class="card-text">Find the Past Year Mumbai University Question Papers here.</p>
-                    <a href="#" class="card-link">Previous Year University Papers</a>
+                    <a href="{%url 'subjects_mechanics'%}" class="card-link">Previous Year University Papers</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
                     <h5 class="card-title">Previous Year University Solutions</h5>
                     <p class="card-text">Find the Solution for the Past Year Mumbai University Question Papers here.</p>
-                    <a href="#" class="card-link">Previous Year University Solutions</a>
+                    <a href="{%url 'subjects_mechanics'%}" class="card-link">Previous Year University Solutions</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
                     <h5 class="card-title">IAT Question Papers</h5>
                     <p class="card-text">Find the Past Year College IAT Exam Question Papers here.</p>
-                    <a href="#" class="card-link">IAT Question Papers</a>
+                    <a href="{%url 'subjects_mechanics'%}" class="card-link">IAT Question Papers</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
                     <h5 class="card-title">Prelim Question Papers</h5>
                     <p class="card-text">Find the Past Year College Prelim Exam Question Papers here.</p>
-                    <a href="#" class="card-link">Prelim Question Papers</a>
+                    <a href="{%url 'subjects_mechanics'%}" class="card-link">Prelim Question Papers</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
                     <h5 class="card-title">Important Notes</h5>
                     <p class="card-text">Find the important notes prepared by our Expert Faculty Members</p>
-                    <a href="#" class="card-link">Important Notes</a>
+                    <a href="{%url 'subjects_mechanics'%}" class="card-link">Important Notes</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
                     <h5 class="card-title">Question Bank</h5>
                     <p class="card-text">Find the tutorial questions, important questions and question bank to for better preparation here.</p>
-                    <a href="#" class="card-link">Question Bank</a>
+                    <a href="{%url 'subjects_mechanics'%}" class="card-link">Question Bank</a>
                   </div>
                 </div>
                   
@@ -365,56 +365,56 @@
                   <div class="card-body">
                     <h5 class="card-title">Syllabus</h5>
                     <p class="card-text">Find the latest update in Mumbai University Syllabus here.</p>
-                    <a href="#" class="card-link">Syllabus</a>
+                    <a href="{%url 'subjects_bee'%}" class="card-link">Syllabus</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
                     <h5 class="card-title">Time Table</h5>
                     <p class="card-text">Find the End-Sem time table, IAT time table and Prelim Exam time table here</p>
-                    <a href="#" class="card-link">Time Table</a>
+                    <a href="{%url 'subjects_bee'%}" class="card-link">Time Table</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
                     <h5 class="card-title">Previous Year University Papers</h5>
                     <p class="card-text">Find the Past Year Mumbai University Question Papers here.</p>
-                    <a href="#" class="card-link">Previous Year University Papers</a>
+                    <a href="{%url 'subjects_bee'%}" class="card-link">Previous Year University Papers</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
                     <h5 class="card-title">Previous Year University Solutions</h5>
                     <p class="card-text">Find the Solution for the Past Year Mumbai University Question Papers here.</p>
-                    <a href="#" class="card-link">Previous Year University Solutions</a>
+                    <a href="{%url 'subjects_bee'%}" class="card-link">Previous Year University Solutions</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
                     <h5 class="card-title">IAT Question Papers</h5>
                     <p class="card-text">Find the Past Year College IAT Exam Question Papers here.</p>
-                    <a href="#" class="card-link">IAT Question Papers</a>
+                    <a href="{%url 'subjects_bee'%}" class="card-link">IAT Question Papers</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
                     <h5 class="card-title">Prelim Question Papers</h5>
                     <p class="card-text">Find the Past Year College Prelim Exam Question Papers here.</p>
-                    <a href="#" class="card-link">Prelim Question Papers</a>
+                    <a href="{%url 'subjects_bee'%}" class="card-link">Prelim Question Papers</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
                     <h5 class="card-title">Important Notes</h5>
                     <p class="card-text">Find the important notes prepared by our Expert Faculty Members</p>
-                    <a href="#" class="card-link">Important Notes</a>
+                    <a href="{%url 'subjects_bee'%}" class="card-link">Important Notes</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
                     <h5 class="card-title">Question Bank</h5>
                     <p class="card-text">Find the tutorial questions, important questions and question bank to for better preparation here.</p>
-                    <a href="#" class="card-link">Question Bank</a>
+                    <a href="{%url 'subjects_bee'%}" class="card-link">Question Bank</a>
                   </div>
                 </div>
                   
@@ -436,15 +436,15 @@
   </div>
 <!--Footer-->
   <footer>
-    <h6><a href="{% url 'home'%}">Engineering Helper</a></h6>
+    <h6><a href="{% url 'home'%}">SemBooster</a></h6>
     {%if user.is_authenticated%}
     {%else%}
       <h6><a href="accounts/login">Login</a></h6>
       <h6><a href="accounts/register">Register</a></h6>
     {%endif%}
     <h6><a href="{% url 'mcq'%}">Solve MCQs</a></h6>
-    <h6><a href="#">About Us</a></h6>
-    <h6><a href="#">Contact Us</a></h6>
+    <h6><a href="{% url 'aboutus'%}">About Us</a></h6>
+    <h6><a href="{% url 'feedback'%}">Contact Us</a></h6>
   </footer>
   
 <!--Scripts-->

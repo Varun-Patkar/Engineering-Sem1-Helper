@@ -1,4 +1,6 @@
 {%extends 'subjects/subjects_base.html'%}
+{%load static%}
+{% static 'Images' as ImageUrl%}
 {%block content%}
 {%for pdf in tt%}
 <div class="card" style="width: 16rem;">
@@ -94,3 +96,4 @@
 </div>
 {%endif%}
 {%endblock%}
+{%block Image%}url('{{ImageUrl}}/MECHANICS.jpg'){%endblock%}
