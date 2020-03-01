@@ -31,12 +31,17 @@
         <!-- Logo Text -->
         <span class="text-uppercase font-weight-bold">Engineering Helper</span>
       </a>
+      
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div></div>
+
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'mcq'%}" style="color: black;">About Us</a>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black;">
               Subjects
@@ -55,6 +60,7 @@
           <li class="nav-item">
             <a class="nav-link" href="{% url 'mcq'%}" style="color: black;">Practice Questions</a>
           </li>
+          
           {%if user.is_authenticated%}
           <li class="nav-item"  id="login"><a href="#" id="hello">Hello, {{user.first_name}}</a></li>
           <li class="nav-item"  id="login"><a href="accounts/logout" id="logout">Logout</a></li>
@@ -78,17 +84,16 @@
 </section>
 <!--Top image-->
 </header>
-    <div class="item2" style="background-image:linear-gradient(rgba(177, 177, 177, 0.5), rgba(0, 0, 0, 0.5)), url('{{ImageUrl}}/thought.jpg');">
+    <div class="item2" style="background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{ImageUrl}}/thought.jpg');">
       <div class="top-text">
-        <h1 >lorem</h1>
-       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        <h1 >Your Path to Sucess</h1>
+       <p style="font-size: 20px;">Enhance your knowledge and strengthen your concepts online.</p>
       </div>
     </div>
 <!--Cards-->
     <main>
       <div class="heading">
-        <h1>lorem</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <h1>Learn on your schedule</h1>
       </div>
       <div class="row">
         <div class="col-3">
@@ -108,82 +113,58 @@
               <div class="sub-card">
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
+                    <h5 class="card-title">Syllabus</h5>
+                    <p class="card-text">Find the latest update in Mumbai University Syllabus here.</p>
+                    <a href="#" class="card-link">Syllabus</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
+                    <h5 class="card-title">Time Table</h5>
+                    <p class="card-text">Find the End-Sem time table, IAT time table and Prelim Exam time table here</p>
+                    <a href="#" class="card-link">Time Table</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
+                    <h5 class="card-title">Previous Year University Papers</h5>
+                    <p class="card-text">Find the Past Year Mumbai University Question Papers here.</p>
+                    <a href="#" class="card-link">Previous Year University Papers</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
+                    <h5 class="card-title">Previous Year University Solutions</h5>
+                    <p class="card-text">Find the Solution for the Past Year Mumbai University Question Papers here.</p>
+                    <a href="#" class="card-link">Previous Year University Solutions</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
+                    <h5 class="card-title">IAT Question Papers</h5>
+                    <p class="card-text">Find the Past Year College IAT Exam Question Papers here.</p>
+                    <a href="#" class="card-link">IAT Question Papers</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
+                    <h5 class="card-title">Prelim Question Papers</h5>
+                    <p class="card-text">Find the Past Year College Prelim Exam Question Papers here.</p>
+                    <a href="#" class="card-link">Prelim Question Papers</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
+                    <h5 class="card-title">Important Notes</h5>
+                    <p class="card-text">Find the important notes prepared by our Expert Faculty Members</p>
+                    <a href="#" class="card-link">Important Notes</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
-                  </div>
-                </div>
-                <div class="card" style="width: 16rem;">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
-                  </div>
-                </div>
-                <div class="card" style="width: 16rem;">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
+                    <h5 class="card-title">Question Bank</h5>
+                    <p class="card-text">Find the tutorial questions, important questions and question bank to for better preparation here.</p>
+                    <a href="#" class="card-link">Question Bank</a>
                   </div>
                 </div>
                   
@@ -196,105 +177,120 @@
               <div class="sub-card">
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
+                    <h5 class="card-title">Syllabus</h5>
+                    <p class="card-text">Find the latest update in Mumbai University Syllabus here.</p>
+                    <a href="#" class="card-link">Syllabus</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
+                    <h5 class="card-title">Time Table</h5>
+                    <p class="card-text">Find the End-Sem time table, IAT time table and Prelim Exam time table here</p>
+                    <a href="#" class="card-link">Time Table</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
+                    <h5 class="card-title">Previous Year University Papers</h5>
+                    <p class="card-text">Find the Past Year Mumbai University Question Papers here.</p>
+                    <a href="#" class="card-link">Previous Year University Papers</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
+                    <h5 class="card-title">Previous Year University Solutions</h5>
+                    <p class="card-text">Find the Solution for the Past Year Mumbai University Question Papers here.</p>
+                    <a href="#" class="card-link">Previous Year University Solutions</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
+                    <h5 class="card-title">IAT Question Papers</h5>
+                    <p class="card-text">Find the Past Year College IAT Exam Question Papers here.</p>
+                    <a href="#" class="card-link">IAT Question Papers</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
+                    <h5 class="card-title">Prelim Question Papers</h5>
+                    <p class="card-text">Find the Past Year College Prelim Exam Question Papers here.</p>
+                    <a href="#" class="card-link">Prelim Question Papers</a>
+                  </div>
+                </div>
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Important Notes</h5>
+                    <p class="card-text">Find the important notes prepared by our Expert Faculty Members</p>
+                    <a href="#" class="card-link">Important Notes</a>
+                  </div>
+                </div>
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Question Bank</h5>
+                    <p class="card-text">Find the tutorial questions, important questions and question bank to for better preparation here.</p>
+                    <a href="#" class="card-link">Question Bank</a>
                   </div>
                 </div>
                   
-              </div>
+              </div>            
             </div>
             <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
               <h3>Engineering Chemistry</h3>
               <div class="sub-card">
-                
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
+                    <h5 class="card-title">Syllabus</h5>
+                    <p class="card-text">Find the latest update in Mumbai University Syllabus here.</p>
+                    <a href="#" class="card-link">Syllabus</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
+                    <h5 class="card-title">Time Table</h5>
+                    <p class="card-text">Find the End-Sem time table, IAT time table and Prelim Exam time table here</p>
+                    <a href="#" class="card-link">Time Table</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
+                    <h5 class="card-title">Previous Year University Papers</h5>
+                    <p class="card-text">Find the Past Year Mumbai University Question Papers here.</p>
+                    <a href="#" class="card-link">Previous Year University Papers</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
+                    <h5 class="card-title">Previous Year University Solutions</h5>
+                    <p class="card-text">Find the Solution for the Past Year Mumbai University Question Papers here.</p>
+                    <a href="#" class="card-link">Previous Year University Solutions</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
+                    <h5 class="card-title">IAT Question Papers</h5>
+                    <p class="card-text">Find the Past Year College IAT Exam Question Papers here.</p>
+                    <a href="#" class="card-link">IAT Question Papers</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
+                    <h5 class="card-title">Prelim Question Papers</h5>
+                    <p class="card-text">Find the Past Year College Prelim Exam Question Papers here.</p>
+                    <a href="#" class="card-link">Prelim Question Papers</a>
+                  </div>
+                </div>
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Important Notes</h5>
+                    <p class="card-text">Find the important notes prepared by our Expert Faculty Members</p>
+                    <a href="#" class="card-link">Important Notes</a>
+                  </div>
+                </div>
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Question Bank</h5>
+                    <p class="card-text">Find the tutorial questions, important questions and question bank to for better preparation here.</p>
+                    <a href="#" class="card-link">Question Bank</a>
                   </div>
                 </div>
                   
@@ -305,155 +301,133 @@
               <div class="sub-card">
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
+                    <h5 class="card-title">Syllabus</h5>
+                    <p class="card-text">Find the latest update in Mumbai University Syllabus here.</p>
+                    <a href="#" class="card-link">Syllabus</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
+                    <h5 class="card-title">Time Table</h5>
+                    <p class="card-text">Find the End-Sem time table, IAT time table and Prelim Exam time table here</p>
+                    <a href="#" class="card-link">Time Table</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
+                    <h5 class="card-title">Previous Year University Papers</h5>
+                    <p class="card-text">Find the Past Year Mumbai University Question Papers here.</p>
+                    <a href="#" class="card-link">Previous Year University Papers</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
+                    <h5 class="card-title">Previous Year University Solutions</h5>
+                    <p class="card-text">Find the Solution for the Past Year Mumbai University Question Papers here.</p>
+                    <a href="#" class="card-link">Previous Year University Solutions</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
+                    <h5 class="card-title">IAT Question Papers</h5>
+                    <p class="card-text">Find the Past Year College IAT Exam Question Papers here.</p>
+                    <a href="#" class="card-link">IAT Question Papers</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
+                    <h5 class="card-title">Prelim Question Papers</h5>
+                    <p class="card-text">Find the Past Year College Prelim Exam Question Papers here.</p>
+                    <a href="#" class="card-link">Prelim Question Papers</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
+                    <h5 class="card-title">Important Notes</h5>
+                    <p class="card-text">Find the important notes prepared by our Expert Faculty Members</p>
+                    <a href="#" class="card-link">Important Notes</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
-                  </div>
-                </div>
-                <div class="card" style="width: 16rem;">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
-                  </div>
-                </div>
-                <div class="card" style="width: 16rem;">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
-                  </div>
-                </div>
-                <div class="card" style="width: 16rem;">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
+                    <h5 class="card-title">Question Bank</h5>
+                    <p class="card-text">Find the tutorial questions, important questions and question bank to for better preparation here.</p>
+                    <a href="#" class="card-link">Question Bank</a>
                   </div>
                 </div>
                   
-              </div></div>
+              </div>
+            </div>
             <div class="tab-pane fade" id="v-pills-something" role="tabpanel" aria-labelledby="v-pills-something-tab">
               <h3>Basic Electrical Engineering</h3>
               <div class="sub-card">
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
+                    <h5 class="card-title">Syllabus</h5>
+                    <p class="card-text">Find the latest update in Mumbai University Syllabus here.</p>
+                    <a href="#" class="card-link">Syllabus</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
+                    <h5 class="card-title">Time Table</h5>
+                    <p class="card-text">Find the End-Sem time table, IAT time table and Prelim Exam time table here</p>
+                    <a href="#" class="card-link">Time Table</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
+                    <h5 class="card-title">Previous Year University Papers</h5>
+                    <p class="card-text">Find the Past Year Mumbai University Question Papers here.</p>
+                    <a href="#" class="card-link">Previous Year University Papers</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
+                    <h5 class="card-title">Previous Year University Solutions</h5>
+                    <p class="card-text">Find the Solution for the Past Year Mumbai University Question Papers here.</p>
+                    <a href="#" class="card-link">Previous Year University Solutions</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
+                    <h5 class="card-title">IAT Question Papers</h5>
+                    <p class="card-text">Find the Past Year College IAT Exam Question Papers here.</p>
+                    <a href="#" class="card-link">IAT Question Papers</a>
                   </div>
                 </div>
                 <div class="card" style="width: 16rem;">
                   <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">Concepts</h6>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="card-link">Card link</a>
+                    <h5 class="card-title">Prelim Question Papers</h5>
+                    <p class="card-text">Find the Past Year College Prelim Exam Question Papers here.</p>
+                    <a href="#" class="card-link">Prelim Question Papers</a>
+                  </div>
+                </div>
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Important Notes</h5>
+                    <p class="card-text">Find the important notes prepared by our Expert Faculty Members</p>
+                    <a href="#" class="card-link">Important Notes</a>
+                  </div>
+                </div>
+                <div class="card" style="width: 16rem;">
+                  <div class="card-body">
+                    <h5 class="card-title">Question Bank</h5>
+                    <p class="card-text">Find the tutorial questions, important questions and question bank to for better preparation here.</p>
+                    <a href="#" class="card-link">Question Bank</a>
                   </div>
                 </div>
                   
-              </div></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </main> 
 <!--Bottom-->
-    <div class="item3" style="background-image: url('{{ImageUrl}}/bottom_bkgd.png');">
-      <h1>Lorem</h1>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, consequuntur? Dolor, deleniti cum officia doloribus debitis perspiciatis excepturi molestias velit nesciunt quas magni porro pariatur modi maiores saepe voluptate reiciendis?</p>
+    <div class="item3" style="background-image: url('{{ImageUrl}}/bottom_bkgd.png');color: white;">
+      <h1>Let's Get Started</h1>
+      <p style="font-size: 20px; color: white;">Take the next step toward your personal and professional goals.</p>
       {%if user.is_authenticated%}
       {%else%}
         <a class="btn btn-primary btn-lg" href="accounts/register" role="button">Get Started</a>
@@ -469,6 +443,8 @@
       <h6><a href="accounts/register">Register</a></h6>
     {%endif%}
     <h6><a href="{% url 'mcq'%}">Solve MCQs</a></h6>
+    <h6><a href="#">About Us</a></h6>
+    <h6><a href="#">Contact Us</a></h6>
   </footer>
   
 <!--Scripts-->
