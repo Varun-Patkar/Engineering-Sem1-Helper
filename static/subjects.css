@@ -59,6 +59,7 @@ main{
   text-transform: uppercase;
   padding-top: 70px;
   font-size: 60px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 .item3{
   grid-column: 1/14;
@@ -89,9 +90,9 @@ input:checked + .content #grid {
   width: 100%;
 }
 .container-fluid{
-  padding: 20px 0 ;
+  padding-top: 0;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.9);
   
 }
 .navbar{
