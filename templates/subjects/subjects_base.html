@@ -60,7 +60,7 @@
             <a class="nav-link" href="{% url 'aboutus'%}" style="color: black;">About Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'feedback'%}" style="color: black;">Contact Us</a>
+            <a class="nav-link" href="{% url 'feedback'%}" style="color: black;">Feedback</a>
           </li>
           {%if user.is_authenticated%}
           <li class="nav-item"  id="login"><a href="#" id="hello">Hello, {{user.first_name}}</a></li>
@@ -124,8 +124,8 @@
       <h6><a href="accounts/register">Register</a></h6>
     {%endif%}
     <h6><a href="{% url 'mcq'%}">Solve MCQs</a></h6>
-    <h6><a href="#">About Us</a></h6>
-    <h6><a href="#">Contact Us</a></h6>
+    <h6><a href="{% url 'aboutus'%}">About Us</a></h6>
+    <h6><a href="{% url 'feedback'%}">Feedback</a></h6>
   </footer>
   
 <!--Scripts-->
