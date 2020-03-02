@@ -1,9 +1,18 @@
 from django.shortcuts import render,redirect
-from .models import MCQ,PDF,Announcement
+from django.contrib import messages
+from .models import MCQ,PDF,Announcement,Feedback
 from django.contrib.auth.decorators import login_required
 # Create your views here.
 def feedback(request):
-    return render(request,'feed-back.html')
+    if request.method=='POST':
+        first_name=request.POST['first_name']
+        last_name=request.POST['last_name']
+        email=request.POST['email']
+        text=request.POST['message']
+        messages.success(request,f'Your Feedback has been recieved!')
+        return redirect("/")
+    else:
+        return render(request,'feed-back.html')
 def aboutus(request):
     return render(request,'aboutus.html')
 def home(request):

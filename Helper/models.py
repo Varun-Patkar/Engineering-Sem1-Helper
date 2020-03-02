@@ -35,3 +35,9 @@ class PDF(models.Model):
 class Announcement(models.Model):
     text=models.TextField()
     upload=models.FileField(upload_to="",blank=True)
+
+class Feedback(models.Model):
+    first_name=models.CharField(max_length=50)
+    last_name=models.CharField(max_length=50)
+    email=models.EmailField(max_length=50)
+    text=models.TextField()
