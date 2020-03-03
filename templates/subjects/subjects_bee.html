@@ -2,6 +2,7 @@
 {%load static%}
 {% static 'Images' as ImageUrl%}
 {%block content%}
+
 {%for pdf in tt%}
 <div class="card" style="width: 16rem;">
     <div class="card-body">
@@ -96,3 +97,12 @@
 {%endif%}
 {%endblock%}
 {%block Image%}url('{{ImageUrl}}/BEE.jpg'){%endblock%}
+{%block syllabus%}
+<div class="card" style="width: 18rem; margin-left:50px;" >
+  <div class="card-body">
+    <h5 class="card-title">Syllabus</h5>
+    <p class="card-text">Latest Mumbai University Syllabus</p>
+    <a href="/media/" class="card-link">Syllabus</a>
+  </div>
+</div>
+{%endblock%}
