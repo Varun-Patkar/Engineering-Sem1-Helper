@@ -6,7 +6,7 @@ body{
     box-sizing: border-box;
 }
 .quiz-container{
-    max-width: 600px;
+    max-width: 700px;
     min-height: 500px;
     background-color: rgba(255, 255, 255, 0.8);
     margin: 30px auto;
