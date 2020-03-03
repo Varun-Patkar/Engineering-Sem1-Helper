@@ -163,7 +163,37 @@ input:checked + .content #grid {
 .list-group-item{
   background-color:  #d3e9fd;
 }
+.material{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(5rem,1fr));
+  grid-auto-rows: minmax(50px,auto);
+  grid-gap: 5px;
+  grid-gap: 20px;
+  grid-template-areas: 
+  " . time_table time_table . "
+  "syllabus imp_notes question_bank practice_questions"
+}
+.imp_notes{
+  grid-area: imp_notes;
+  justify-self: center;
+}
+.time_table{
+  grid-area: time_table;
+  justify-self: center;
+}
+.question_bank{
+  grid-area: question_bank;
+  justify-self: center;
 
+}
+.practice_questions{
+  grid-area: practice_questions;
+  justify-self: center;
+}
+.syllabus{
+  grid-area: syllabus;
+  justify-self: center;
+}
 .prev-link{
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(5rem,1fr));
@@ -370,15 +400,16 @@ background-color:  #d3e9fd;
   right: 30px;
   z-index: 99;
   font-size: 18px;
-  border: none;
   outline: none;
-  background-color: red;
+  background-color: rgb(89, 167, 255);
   color: white;
   cursor: pointer;
   padding: 15px;
-  border-radius: 4px;
+  border-radius: 5px;
+  border: 1px solid white;
+
 }
 
 #myBtn:hover {
-  background-color: #555;
+  background-color: rgb(0, 172, 252);
 }
